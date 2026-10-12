@@ -1,0 +1,16 @@
+/* Price Chart Component */
+
+.price-chart {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.chart-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line {
+  filter: drop-shadow(0 0 3px currentColor);
+}

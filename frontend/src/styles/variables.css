@@ -1,0 +1,110 @@
+/* Emporia - Restrained Color Palette & Design System */
+
+:root {
+  /* Base Colors - Dark, muted, atmospheric */
+  --bg-deep: #0d0d12;
+  --bg-dark: #16161d;
+  --bg-mid: #1e1e28;
+  --bg-elevated: #252530;
+  
+  /* Primary Accent - Electric cyan (used sparingly) */
+  --accent-primary: #00e5ff;
+  --accent-primary-dim: #0099aa;
+  --accent-primary-glow: rgba(0, 229, 255, 0.4);
+  
+  /* Secondary Accent - Warm amber (for warnings, energy) */
+  --accent-secondary: #ffaa00;
+  --accent-secondary-dim: #cc7700;
+  
+  /* Semantic Colors */
+  --color-positive: #00ff88;
+  --color-negative: #ff4466;
+  --color-warning: #ffaa00;
+  --color-info: #00e5ff;
+  
+  /* Text */
+  --text-primary: #e8e8f0;
+  --text-secondary: #a8a8b8;
+  --text-tertiary: #686878;
+  
+  /* Borders & Dividers */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-normal: rgba(255, 255, 255, 0.12);
+  --border-emphasis: rgba(0, 229, 255, 0.3);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Orbitron', monospace;
+  --font-mono: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  
+  /* Layout */
+  --border-radius: 2px;
+  --hud-padding: 20px;
+}
+
+/* Remove excessive effects */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Simple, functional UI elements */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-normal);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-emphasis);
+}
+
+/* Remove all the excessive glow effects */
+.no-glow {
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
