@@ -1,0 +1,204 @@
+/* Portfolio Screen */
+
+.portfolio-screen {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--cyber-black), var(--cyber-midnight));
+}
+
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  font-family: var(--font-display);
+  letter-spacing: 2px;
+}
+
+.portfolio-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.overview-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.overview-stat .stat-label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-family: var(--font-display);
+  letter-spacing: 1px;
+}
+
+.overview-stat .stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.holdings-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--cyber-cyan);
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.holdings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.holding-card {
+  padding: 1.5rem;
+}
+
+.holding-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+.holding-header h3 {
+  font-size: 1.1rem;
+  color: var(--cyber-cyan);
+}
+
+.holding-type {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  background: rgba(0, 242, 255, 0.1);
+  border: 1px solid var(--cyber-cyan);
+  border-radius: 3px;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.holding-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.stat-row.total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+}
+
+.stat-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0, 242, 255, 0.3), transparent);
+  margin: 0.5rem 0;
+}
+
+.transactions-section {
+  margin-bottom: 2rem;
+}
+
+.transactions-list {
+  padding: 1.5rem;
+}
+
+.transaction-item {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+  background: rgba(0, 242, 255, 0.05);
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-time {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.transaction-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.transaction-type {
+  padding: 0.2rem 0.6rem;
+  font-size: 0.7rem;
+  font-family: var(--font-display);
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.transaction-type.buy {
+  background: rgba(0, 242, 255, 0.1);
+  border: 1px solid var(--cyber-cyan);
+  color: var(--cyber-cyan);
+}
+
+.transaction-type.sell {
+  background: rgba(255, 51, 102, 0.1);
+  border: 1px solid var(--cyber-warning-red);
+  color: var(--cyber-warning-red);
+}
+
+.transaction-asset {
+  font-weight: 600;
+}
+
+.transaction-amounts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-overview {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .holdings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transaction-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
